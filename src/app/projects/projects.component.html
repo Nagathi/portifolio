@@ -1,0 +1,29 @@
+<div class="geral">
+
+  <h1 style="color: crimson;"> Projetos </h1>
+    <div class="projetos">
+      <button type="button" [disabled]="isPrimeiroProjeto()" (click)="exibirProjetoAnterior()">
+        <img class="image-button" src="./assets/esquerda.png">
+      </button>
+      <div class="projects">
+        <ng-container *ngFor="let projeto of projetos">
+          <section *ngIf="projeto.id === projetoAtual">
+            <img class="image-section" [src]="projeto.imagem">
+            <p class="indice-projeto">Projeto {{ projeto.id }}</p>
+          </section>
+        </ng-container>
+      </div>
+      <button type="button" [disabled]="isUltimoProjeto()" (click)="exibirProximoProjeto()">
+        <img class="image-button" src="./assets/direita.png">
+      </button>
+    </div>
+    <div class="desc-projeto">
+      <p *ngIf="projetoAtual === 1">Primeiro é necessário definir as tecnologias utilizadas nesse projeto que foram Angular com TypeScript, Spring Boot com Java 17 e MySQL. Nesse projeto foi construída uma página estática que renderiza diversos componentes implementando o conceito de single-page application, é um projeto ambicioso que visa implementar uma plataforma para depositar gráficos táteis, essa plataforma já existe e esse projeto é uma réplica dela implementando tecnologias diferentes e um código feito do 0. No que diz respeito ao Frontend, essa página implementa cadastro de usuários com dados e uma foto que pode ser alterada, como se fosse um perfil de rede social, cadastro de arquivos e dados desses arquivos. No Backend foram implementadas rotas que aceitam requisições para cadastrar arquivo, usuário, fazer alterações nos arquivos e nos usuários e outros métodos utilizando o design pattern MVC padrão do Spring Boot com a camada de modelo de negócios Service. Confira o projeto no <a target="_blank" href="https://github.com/Nagathi/mypalpit-teste">GitHub</a></p>
+      <p *ngIf="projetoAtual === 2">Descrição do projeto número 2</p>
+      <p *ngIf="projetoAtual === 3">Descrição do projeto número 3</p>
+      <p *ngIf="projetoAtual === 4">Descrição do projeto número 4</p>
+      <p *ngIf="projetoAtual === 5">Descrição do projeto número 5</p>
+      <p *ngIf="projetoAtual === 6">Descrição do projeto número 6</p>
+    </div>
+  </div>
+  

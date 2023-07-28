@@ -1,0 +1,116 @@
+.geral{
+    position: fixed;
+    top: 50px;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.bot{
+    display: flex;
+    width: 100%;
+    height: 60%;
+    background-color: #ccc;
+    justify-content: center;
+    align-items: center;
+}
+
+.top{
+    display: flex;
+    width: 100%;
+    height: 40%;
+    background-color: crimson;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+}
+
+h3{
+    font-size: 16px;
+}
+
+h1{
+    font-size: 30px;
+    font-weight: bold   ;
+}
+
+.content h3,
+.content h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 10px;
+  padding: 0;
+}
+
+.content button{
+    margin-top: 10px;
+    height: 50px;
+    width: 100%;
+    border-radius: 50px 50px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(197, 59, 197);
+    border: none;
+}
+
+.right-content{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.content button:hover{
+    cursor: pointer;
+    background-color: rgb(236, 62, 236);
+}
+
+@media screen and (max-width: 768px) {
+    .geral{
+        flex-direction: column;
+    }
+
+    .bot{
+        width: 100%;
+        height: 70%;
+        justify-content: center;
+    }
+    
+    .top{
+        width: 100%;
+        height: 30%;
+        
+    }
+
+    .content{
+        align-items: center;
+        justify-content: center;
+    }
+  }
+  
+  .icons{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .icons img{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+  }
